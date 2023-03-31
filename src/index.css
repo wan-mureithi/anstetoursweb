@@ -1198,8 +1198,12 @@ header.header-type-three .header_top_area .contact_wrapper_top .header_top_conta
 .about-content {
 	margin-bottom: 30px;
 }
+.about-content p {
+	font-size: 14px;
+}
 .about-content h2 {
 	margin-bottom: 30px;
+	font-size: 20px;
 }
 .about-content .read-btn {
 	display: inline-block;
@@ -1874,6 +1878,9 @@ ul.about-listing {
 	background: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.media {
+	display: flex;
+}
 .single_package:hover .media-body h3 {
 	color: #21ab64;
 }
@@ -1899,9 +1906,18 @@ ul.about-listing {
 	-moz-transition: all ease-in-out 0.5s;
 	-ms-transition: all ease-in-out 0.5s;
 	-o-transition: all ease-in-out 0.5s;
+	font-size:20px ;
+}
+.duration ul {
+	padding: 0px;
+}
+.media-body a {
+	color: #000;
+	text-decoration: none;
 }
 .single_package .media-body p {
 	margin-bottom: 20px;
+	font-size: 14px ;
 }
 .single_package .media-body .duration {
 	display: inline-block;
@@ -1917,7 +1933,7 @@ ul.about-listing {
 }
 .single_package .media-body ul h5 {
 	font-size: 15px;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 .single_package .media-body ul li i {
 	padding-right: 5px;

@@ -1,66 +1,16 @@
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBullhorn, faPlane, faHome, faTicket, faClock, faTags,faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { packages } from '../data/packages';
+import AppBar from '../components/AppBar';
+import Footer from '../components/Footer';
+import Partners from '../components/Partners';
 
 const Home = () => {
   return (
     <>
-        <header class="header-type-three">
-        <div class="header_top_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="contact_wrapper_top">
-                            <ul class="header_top_contact">
-                                <li><i class="fa fa-phone" aria-hidden="true"></i>+254 777 991597</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i>anstetours@anstegroup.com</li>
-                            </ul>
-                            <div class="topbar-icon">
-                                <ul>
-                                    <li><a href="https://twitter.com/anstetours"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.facebook.com/anstetoursandtravel"><i class="fab fa-facebook-f"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-fixed header-one">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="/">
-                        <img src="img/removebg-preview.png" alt="logo" style={{ width:"200px"}}/>
-                    </a>
-                    <div class="collapse navbar-collapse my-lg-0" id="navbarNav">
-                        <ul id="navbarlinks" class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#home">Home</a>
-                               
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#services">Our Services</a>
-                               
-                            </li>
-           
-                            <li class="nav-item">
-                                <a class="nav-link" href="#packages">Tour Packages</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contactus">Contact Us</a>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                </nav>
-                <div style={{width:"165px"}} class="mobile-menu" data-logo="img/removebg-preview.png"></div>
-            </div>
-        </div>
-    </header>  
+  <AppBar/>
     <main class="hero-slide-three ">
-        
         <div class="item">
             <img src="img/index_bg2.jpg" alt="hero-1"/>
             <div class="hero-slider__content-wrapper">
@@ -118,9 +68,9 @@ const Home = () => {
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fas fa-bullhorn"></i></div>
+                                <div class="service-box-icon"><i class="fas fa-bullhorn"><FontAwesomeIcon icon={faBullhorn}/></i></div>
                                 <h3 class="service-box-title">Itinerary curation</h3>
                                 <p class="service-box-desc">We will work with you to create a customized itinerary that matches your travel preferences,
                                      interests and budget ensuring that your trip is a memorable and stress-free experience.</p>
@@ -128,9 +78,9 @@ const Home = () => {
                             </div>
                            
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fab fa-avianex"></i></div>
+                                <div class="service-box-icon"><i class="fab fa-avianex"><FontAwesomeIcon icon={faPlane}/></i></div>
                                 <h3 class="service-box-title">Visa Application </h3>
                                 <p class="service-box-desc">We ensure that you have all the necessary documentation and 
                                     information to apply for a visa and that the process is as smooth and hassle-free as possible.
@@ -138,18 +88,18 @@ const Home = () => {
                                 
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fa fa-home"></i></div>
+                                <div class="service-box-icon"><i class="fa fa-home"><FontAwesomeIcon icon={faHome}/></i></div>
                                 <h3 class="service-box-title">Travel Insurance</h3>
                                 <p class="service-box-desc">Comprehensive travel insurance that covers unexpected events such as trip cancellations, medical emergencies and lost luggage giving you peace of 
                                     mind and protection while you travel.</p>
                                 
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fas fa-ticket-alt"></i></div>
+                                <div class="service-box-icon"><i class="fas fa-ticket-alt"><FontAwesomeIcon icon={faTicket}/></i></div>
                                 <h3 class="service-box-title">M.I.C.E Facilitation</h3>
                                 <p class="service-box-desc">We provide Meetings, Incentives, Conferences and Exhibitions (M.I.C.E). Business tourism at its best. We bring together professional from different industries 
                                 in an enhanced, tailor-made hospitality setting. </p>
@@ -176,26 +126,26 @@ const Home = () => {
             
             <div class="row small-package-list">
             {packages.map((item,index)=>(
-                <div key={index} class="col-lg-4 col-md-6 col-sm-12 masonry">
+                <div key={index} class="col-lg-6 col-md-6 col-sm-12">
                 <div class="single_package">
                     <div class="media">
-                        <img src="img/packages/marina.jpg" alt=""/>
+                        <img src={item.image} alt=""/>
                         <div class="media-body">
-                            <span class="direction"><i class="fas fa-map-marker-alt"></i> {item.location}</span>
+                            <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt}/></i> {item.location} </span>
                             <h3><a href="/">{item.title}</a></h3>
                             <div class="duration">
                                 <ul>
                                     <li>
-                                        <p> <i class="far fa-clock"></i> Duration</p>
-                                        <h5>4 Days</h5>
+                                        <p> <i class="far fa-clock"><FontAwesomeIcon icon={faClock}/></i> Duration</p>
+                                        <h5>5 Days</h5>
                                     </li>
                                     <li>
-                                        <p> <i class="fas fa-tags"></i> From</p>
-                                        <h5>KES 30,000</h5>
+                                        <p> <i class="fas fa-tags"><FontAwesomeIcon icon={faTags}/></i> From</p>
+                                        <h5>KES 50,000</h5>
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#contactus" class="btn-packlist">Book now</a>
+                            <button class="btn-packlist">Book now</button>
                         </div>
                     </div>
                 </div>
@@ -205,113 +155,8 @@ const Home = () => {
             </div>
         </div>
     </section>
-    <section class="same-section-spacing bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-title ">
-                        <h2 class="title">Our Partners</h2>
-                        <h4 class="sub-title">We partner with various companies to offer our clients the best prices and experiences.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="client-slide">
-                       <>
-                       <div class="item" style={{ display:'inline-block', width:'100%' }}>
-                            <div class="img-wapper">
-                                <img src="img/tralogo.png" alt=""/>
-                            </div>
-                        </div>
-                        <div class="item" style={{ display:'inline-block', width:'100%' }}>
-                            <div class="img-wapper">
-                                <img src="img/logo_kata.png" alt=""/>
-                            </div>
-                        </div>
-                        <div class="item" style={{ display:'inline-block', width:'100%' }}>
-                            <div class="img-wapper">
-                                <img src="img/ecotourism.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="item" style={{ display:'inline-block', width:'100%' }}>
-                            <div class="img-wapper">
-                                <img src="img/kato_bonded logo.png" alt=""/>
-                            </div>
-                        </div>
-                       
-                       </>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="contactus" class="ws-section-spacing img-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footer-widget">
-                        <div class="title">
-                            <h3>About Us</h3>
-                        </div>
-                        <p>We offer tailor-made East African safaris and international travels. Our team welcomes you with warm hospitality and offers you an immersive, genuine and remarkable safari experience you’ll never forget.</p>
-                        <ul class="footer-icon">
-                            <li><a href="https://twitter.com/anstetours"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/anstetoursandtravel"><i class="fab fa-facebook-f"></i></a></li>
-                        </ul>
-
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footer-widget">
-                        <div class="title">
-                            <h3>Contact Info</h3>
-                        </div>
-                        <div class="contact-info-two">
-                            <ul>
-                                <li>
-                                    <h4 style={{color:'white'}}>Address</h4>
-                                    <p>ANSTE TOURS & TRAVEL LTD
-                                        P.O Box 70351- 00400
-                                        NAIROBI, Kenya.
-</p>
-                                </li>
-                                <li>
-                                    <h4 style={{color:'white'}}>Mobile</h4>
-                                    <p>+254 777 991597</p>
-                                    
-                                </li>
-                                <li>
-                                    <h4 style={{color:'white'}}>Email</h4>
-                                    <p>anstetours@anstegroup.com</p>
-                                </li>
-                                <li>
-                                    <h4 style={{color:'white'}}>Operating Hours:</h4>
-                                    <p>Mon-Fri 0830hrs – 1700hrs (EAT)</p>
-                                </li>
-                            </ul>
-    
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="footer-bottom text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="left-text">
-                        Copyright © 2023 Anste Tours & Travel Ltd | All Rights Reserved.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> 
+    <Partners/>
+   <Footer/>
     </>
   )
 }
