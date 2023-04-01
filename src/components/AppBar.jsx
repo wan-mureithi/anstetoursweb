@@ -36,20 +36,20 @@ const AppBar = () => {
                     <div class="collapse navbar-collapse my-lg-0" id="navbarNav">
                         <ul id="navbarlinks" class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#home">Home</a>
+                                <a class="nav-link" href="/">Home</a>
                                
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#services">Our Services</a>
+                                <a class="nav-link" href="/services">Our Services</a>
                                
                             </li>
            
                             <li class="nav-item">
-                                <a class="nav-link" href="#packages">Tour Packages</a>
+                                <a class="nav-link" href="/packages">Tour Packages</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#contactus">Contact Us</a>
+                                <a class="nav-link" href="/contact-us">Contact Us</a>
                             </li>
                         </ul>
                         

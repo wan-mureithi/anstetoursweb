@@ -2,14 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBullhorn, faPlane, faHome, faTicket, faClock, faTags,faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { packages } from '../data/packages';
-import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 import Partners from '../components/Partners';
+import TopBar from '../components/TopBar';
+import MenuBar from '../components/MenuBar';
 
 const Home = () => {
   return (
     <>
-  <AppBar/>
+    <header class="header-type-three">
+        <div class="header_top_area">  
+        <TopBar/>
+       <div class="header-fixed header-one">
+       <MenuBar/>
+       </div>
+        </div>
+    </header>
     <main class="hero-slide-three ">
         <div class="item">
             <img src="img/index_bg2.jpg" alt="hero-1"/>
