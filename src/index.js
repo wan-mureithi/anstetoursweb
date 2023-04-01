@@ -7,6 +7,8 @@ import './styles/responsive.css';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import ErrorPage from './pages/ErrorPage';
+import PackageList from './pages/PackageList';
+import PackageDetails from './pages/PackageDetails';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/contact-us",
     element: <ContactUs />,
+  },
+  {
+    path: "/tour-packages",
+    element: <PackageList />,
+  },
+  {
+    path: "/tour-packages/:id",
+    element: <PackageDetails />,
   },
 ]);
 
