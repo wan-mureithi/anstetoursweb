@@ -6,6 +6,7 @@ import MenuBar from '../components/MenuBar'
 import Partners from '../components/Partners'
 import TopBar from '../components/TopBar'
 import { packages } from '../data/packages'
+import { Link } from 'react-router-dom'
 
 
 const PackageList = () => {
@@ -47,7 +48,7 @@ const PackageList = () => {
                             <img src="img/packages/tour1.JPG" alt=""/>
                             <div class="media-body">
                                 <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>&nbsp;{item.location}</span>
-                                <h3><a href="/international-tours/2">Thrilling experience in capetown</a></h3>
+                                <h3><Link to="/domestic-tours-2">Thrilling experience in capetown</Link></h3>
                                 <p>Stay at affordable hotels in Capetown and get to experience once in a lifetime activities like paragliding</p>
                                 <div class="duration">
                                     <ul>

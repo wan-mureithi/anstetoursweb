@@ -29,6 +29,10 @@ const router = createBrowserRouter([
     element: <PackageList />,
   },
   {
+    path: "/domestic-tours-2",
+    element: <PackageDetails />,
+  },
+  {
     path: "/international-tours/:id",
     element: <PackageDetails />,
   },
