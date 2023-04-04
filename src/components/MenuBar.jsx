@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link, useLocation } from "react-router-dom";
 
 const MenuBar = () => {
+    const location = useLocation();
   return (
     <>
      <div class="container">
@@ -10,21 +12,20 @@ const MenuBar = () => {
                     </a>
                     <div class="collapse navbar-collapse my-lg-0" id="navbarNav">
                         <ul id="navbarlinks" class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home</a>
-                               
+                            <li class={location.pathname === '/' ? 'nav-item active' : 'nav-item'}>
+                                <Link to="/" className='nav-link' >Home</Link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/services">Our Services</a>
                                
                             </li>
            
-                            <li class="nav-item">
-                                <a class="nav-link" href="/packages">Tour Packages</a>
+                            <li class={location.pathname === '/tour-packages' ? 'nav-item active' : 'nav-item'}>
+                                <Link to="/tour-packages" className='nav-link' >Tour packages</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact-us">Contact Us</a>
+                            <li class={location.pathname === '/contact-us' ? 'nav-item active' : 'nav-item'}>
+                            <Link to="/contact-us" className='nav-link' >Contact Us</Link>
                             </li>
                         </ul>
                         

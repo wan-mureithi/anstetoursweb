@@ -28,23 +28,23 @@ const Footer = () => {
                         <div class="contact-info-two">
                             <ul>
                                 <li>
-                                    <h4 style={{color:'white'}}>Address</h4>
+                                    <h4>Address</h4>
                                     <p>ANSTE TOURS & TRAVEL LTD
                                         P.O Box 70351- 00400
                                         NAIROBI, Kenya.
 </p>
                                 </li>
                                 <li>
-                                    <h4 style={{color:'white'}}>Mobile</h4>
+                                    <h4>Mobile</h4>
                                     <p>+254 777 991597</p>
                                     
                                 </li>
                                 <li>
-                                    <h4 style={{color:'white'}}>Email</h4>
+                                    <h4>Email</h4>
                                     <p>anstetours@anstegroup.com</p>
                                 </li>
                                 <li>
-                                    <h4 style={{color:'white'}}>Operating Hours:</h4>
+                                    <h4>Operating Hours:</h4>
                                     <p>Mon-Fri 0830hrs – 1700hrs (EAT)</p>
                                 </li>
                             </ul>

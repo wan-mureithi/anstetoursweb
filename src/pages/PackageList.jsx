@@ -11,11 +11,11 @@ import { packages } from '../data/packages'
 const PackageList = () => {
   return (
     <>
-    <header class="header-type-three">
-        <div class="header_top_area">
+    <header>
+        <div class="header_top_area type-two">
         <TopBar/>
         </div>
-        <div  class="header-fixed header-one">
+        <div class="header-fixed header-two">
             <MenuBar/>
         </div>
         </header> 
@@ -46,8 +46,8 @@ const PackageList = () => {
                         <div class="media">
                             <img src="img/packages/tour1.JPG" alt=""/>
                             <div class="media-body">
-                                <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>{item.location}</span>
-                                <h3><a href="/">Thrilling experience in capetown</a></h3>
+                                <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>&nbsp;{item.location}</span>
+                                <h3><a href="/tour-packages/2">Thrilling experience in capetown</a></h3>
                                 <p>Stay at affordable hotels in Capetown and get to experience once in a lifetime activities like paragliding</p>
                                 <div class="duration">
                                     <ul>

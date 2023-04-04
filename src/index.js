@@ -15,6 +15,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
+  //  loader: <Loader/>
   },
   {
     path: "/contact-us",
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
     path: "/tour-packages/:id",
     element: <PackageDetails />,
   },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

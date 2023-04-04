@@ -145,15 +145,15 @@ const Home = () => {
                                 <ul>
                                     <li>
                                         <p> <i class="far fa-clock"><FontAwesomeIcon icon={faClock}/></i> Duration</p>
-                                        <h5>5 Days</h5>
+                                        <h5>{item.duration}</h5>
                                     </li>
                                     <li>
                                         <p> <i class="fas fa-tags"><FontAwesomeIcon icon={faTags}/></i> From</p>
-                                        <h5>KES 50,000</h5>
+                                        <h5>{item.price}</h5>
                                     </li>
                                 </ul>
                             </div>
-                            <button class="btn-packlist">Book now</button>
+                            <button class="btn-packlist"><a href="/contact-us">Book now</a></button>
                         </div>
                     </div>
                 </div>

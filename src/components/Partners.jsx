@@ -19,22 +19,29 @@ const Partners = () => {
                        <>
                        <div class="item" style={{ display:'inline-block', width:'100%' }}>
                             <div class="img-wapper">
-                                <img src="img/tralogo.png" alt=""/>
+                                <img src="/img/tralogo.png" alt=""/>
                             </div>
                         </div>
                         <div class="item" style={{ display:'inline-block', width:'100%' }}>
                             <div class="img-wapper">
-                                <img src="img/logo_kata.png" alt=""/>
+                                <img src="/img/logo_kata.png" alt=""/>
                             </div>
                         </div>
                         <div class="item" style={{ display:'inline-block', width:'100%' }}>
                             <div class="img-wapper">
-                                <img src="img/ecotourism.jpg" alt=""/>
+                                <img src="/img/ecotourism.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="item" style={{ display:'inline-block', width:'100%' }}>
                             <div class="img-wapper">
-                                <img src="img/kato_bonded logo.png" alt=""/>
+                                <img src="/img/kato_bonded logo.png" alt=""/>
+                            </div>
+                        </div>
+                        <div class="item" style={{ display:'inline-block', width:'100%' }}>
+                            <div class="img-wapper">
+                               <a href='https://www.safaribookings.com' target="_blank" rel='noreferrer'>
+                               <img src="/img/logo_safari_bookings.jpg" alt=""/>
+                               </a>
                             </div>
                         </div>
                        

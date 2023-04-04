@@ -1,10 +1,28 @@
-import React from 'react'
+import React,{useState} from 'react'
 import TopBar from '../components/TopBar';
 import MenuBar from '../components/MenuBar';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 
+const initialUserInfo = {
+    name: '',
+    email: '',
+    subject: '',
+    phoneNumber: '',
+    comment: ''
+}
 const ContactUs = () => {
+const [userMessage, setUserMessage] = useState(initialUserInfo);
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userMessage)
+}
+const handleFormInput = (e) => {
+    const value = e.target.name;
+   setUserMessage({[value]:e.target.value})
+    
+}
   return (
     <>
     <header>
@@ -62,37 +80,37 @@ const ContactUs = () => {
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="uname" placeholder="Name" name="Name"
-                                        required=""/>
+                                    <input type="text" value={userMessage.name} onChange={handleFormInput} class="form-control" placeholder="Name" name="name"
+                                        required />
                                 </div>
 
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="pwd" placeholder="Email"
-                                        name="Email" required=""/>
+                                    <input type="email" value={userMessage.email} onChange={handleFormInput}  class="form-control" placeholder="Email"
+                                        name="email" required />
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="uname" placeholder="Subject" name="Name"
-                                        required=""/>
+                                    <input type="text" value={userMessage.subject} onChange={handleFormInput}  class="form-control" placeholder="Subject" name="subject"
+                                        required/>
                                 </div>
 
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="pwd" placeholder="Phone"
-                                        name="Email" required=""/>
+                                    <input type="text" value={userMessage.phoneNumber} onChange={handleFormInput}  class="form-control" id="pwd" placeholder="Phone"
+                                        name="phone"/>
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <textarea class="form-control" rows="5" id="comment"
+                                <textarea value={userMessage.comment} onChange={handleFormInput}  class="form-control" rows="5" name="comment"
                                     placeholder="Your Comment"></textarea>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn-1">Submit</button>
+                        <button type="submit" onClick={handleSubmit} class="btn-1">Submit</button>
                     </form>
                 </div>
             </div>
