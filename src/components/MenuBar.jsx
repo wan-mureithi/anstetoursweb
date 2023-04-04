@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { Link, useLocation } from "react-router-dom";
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const MenuBar = () => {
     const location = useLocation();
@@ -16,12 +18,47 @@ const MenuBar = () => {
                                 <Link to="/" className='nav-link' >Home</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/services">Our Services</a>
+                                <a class="nav-link" href="/">About Us</a>
                                
                             </li>
            
-                            <li class={location.pathname === '/tour-packages' ? 'nav-item active' : 'nav-item'}>
-                                <Link to="/tour-packages" className='nav-link' >Tour packages</Link>
+                            <li class={location.pathname === '/international-tours' ? 'nav-item active' : 'nav-item'}>
+                                <Link to="/international-tours" className='nav-link' >International tours &nbsp;
+                                <i class="fas fa-angle-down"><FontAwesomeIcon icon={faAngleDown}/> </i>
+                                </Link>
+                                <ul class="dropdown">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Dubai</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Egypt</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">South Africa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">London</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class={location.pathname === '/domestic-tours' ? 'nav-item active' : 'nav-item'}>
+                                <Link to="/domestic-tours" className='nav-link' >Domestic tours &nbsp;
+                                 <i class="fas fa-angle-down"><FontAwesomeIcon icon={faAngleDown}/> </i>
+                                </Link>
+                                <ul class="dropdown">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Nairobi</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Mombasa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Nanyuki</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/domestic-tours">Maasai Mara</a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li class={location.pathname === '/contact-us' ? 'nav-item active' : 'nav-item'}>

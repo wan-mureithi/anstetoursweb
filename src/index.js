@@ -15,14 +15,17 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
-  //  loader: <Loader/>
   },
   {
     path: "/contact-us",
     element: <ContactUs />,
   },
   {
-    path: "/tour-packages",
+    path: "/international-tours",
+    element: <PackageList />,
+  },
+  {
+    path: "/domestic-tours",
     element: <PackageList />,
   },
   {
