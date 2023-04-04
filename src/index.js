@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     element: <PackageList />,
   },
   {
-    path: "/tour-packages/:id",
+    path: "/international-tours/:id",
     element: <PackageDetails />,
   },
   
