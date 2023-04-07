@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import MenuBar from '../components/MenuBar'
 import Partners from '../components/Partners'
 import TopBar from '../components/TopBar'
-import { packages } from '../data/packages'
+import packages  from '../data/packages2.json'
 import { Link } from 'react-router-dom'
 
 
@@ -47,23 +47,22 @@ const PackageList = () => {
                         <div class="media">
                             <img src="img/packages/tour1.JPG" alt=""/>
                             <div class="media-body">
-                                <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>&nbsp;{item.location}</span>
-                                <h3><Link to="/domestic-tours-2">Thrilling experience in capetown</Link></h3>
-                                <p>Stay at affordable hotels in Capetown and get to experience once in a lifetime activities like paragliding</p>
+                                <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>&nbsp;{item.Location}</span>
+                                <h3><Link to="/domestic-tours-2">{item.Title}</Link></h3>
+                                <p>{item['Short description']}</p>
                                 <div class="duration">
                                     <ul>
                                         <li>
                                             <p> <i class="far fa-clock"><FontAwesomeIcon icon={faClock} /></i> Duration</p>
-                                            <h5>{item.duration}</h5>
+                                            <h5>{item.Duration}</h5>
                                         </li>
                                         <li>
                                             <p> <i class="fas fa-tags"><FontAwesomeIcon icon={faTags} /></i> From</p>
-                                            <h5>KES 200,000</h5>
+                                            <h5>{item['Cost approximation']}</h5>
                                         </li>
                                     </ul>
                                 </div>
-                                
-                                <a href="contact-us.html" class="btn-packlist">Book now</a>
+                                <Link to="/contact-us" class="btn-packlist"> Book now</Link>
                             </div>
                         </div>
                     </div>

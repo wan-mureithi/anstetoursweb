@@ -7,6 +7,7 @@ import pack2 from "../images/hot-2.jpg"
 import place from "../images/place.jpg"
 import travel from "../images/travel.jpg"
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 const PackageDetails = () => {
   return (
@@ -45,11 +46,11 @@ const PackageDetails = () => {
                         <div class="package-list-wrap ">
                             <img src={place} class="img-fluid" alt="det-img"/>
                             <div class="package-list-content">
-                                <p class="package-list-duration">3Days, 4 NIghts Start From <span
-                                        class="rate">$350</span>
+                                <p class="package-list-duration">1 day From <span
+                                        class="rate">$150</span>
                                 </p>
                                 <h3 class="package-list-title">
-                                    <a href="/">Four Seasons America</a>
+                                    <a href="/">Nairobi City Excursion</a>
                                 </h3>
                                 <a class="package-list-button" href="/">Book Now</a>
                             </div>
@@ -57,29 +58,15 @@ const PackageDetails = () => {
                         </div>
                         <div class="col-lg-12">
                             <div class="package-info">
-                                <p>Sed et rebum et et est eirmod diam. Sanctus et takimata tempor eos, takimata duo kasd
-                                    amet
-                                    voluptua ipsum amet dolor dolor et. Lorem at takimata eos no et consetetur, amet et
-                                    accusam
-                                    est diam dolore stet ea invidunt. Eos et accusam no ut amet tempor ut labore.
-                                    Dolores
-                                    clita
-                                    kasd gubergren ate ipsum amet sea ipsum. Justo dolores dolores est magna sit eos
-                                    justo
-                                    dolore, ipsum sadipscing rebum lorem elitr, et no eos aliquyam gubergren set at
-                                    magna,
-                                    ipsum at sadipscing at consetetur vero ipsum lorem dolores, et et justo ipsum amet
-                                    rebum lorem ut sadipscing, magna eirmod sanctus.</p>
-                                <p>Nonumy est ut voluptua kasd justo sit. Voluptua est consetetur et amet no ipsum
-                                    takimata
-                                    sit.
-                                    Voluptua nonumy diam sit clita. Sea dolor amet sit ut voluptua takimata, labore kasd
-                                    elitr
-                                    sadipscing consetetur aliquyam dolore lorem amet ipsum, lorem aliquyam gubergren ea
-                                    nonumy
-                                    duo sit nonumy amet dolor. Ut amet ea ea dolores gubergren eirmod aliquyam. Ea ipsum
-                                    diam no
-                                    elitr accusam clita lorem diam at. </p>
+                            <p>Experience three top Nairobi destinations in this day tour. 
+                                    Nairobi National Park tour, Elephant orphanage tour, Giraffe center tour and Karen Blixen Museum tour. This full-day tour is a perfrect way to begin or end your East Africa safari. Search out the wild life at Nairobi National Park, on the outskirts of Nairobi. Enjoy lunch at a local restaurant then visit the Karen Blixen Museum. Stop by at the giraffe center for a close-up look at the endangered Rothschild giraffe. </p>
+                                <p>You'll be picked up from your hotel after breakfast or the airport and proceed immediately to Nairobi National park for close to four hours of intensive game drives.
+At 11:30 am, we head to the David Sheldrick Wildlife Trust, known as the Elephant Orphanage for your chance to have an up-close and personal interaction with these adorable orphaned elephants.
+Your next stop will be the famous Giraffe Center, where you'll have the rare opportunity to come face to face with these beautiful creatures. Lucky visitors might even get a kiss from these unique creatures.
+A brief stop for lunch in any of the nearby restaurants.
+You'll wrap up your day with a visit to the famous Karen Blixen Museum. The museum house is in a serene environment that seems to belong to the past, surrounded by a tranquil garden and indigenous forest, with a splendid view of the Ngong Hills.
+At the end of the show, you are dropped back to your hotel or airport where our services come to an end.</p>
+                                
                             </div>
                         </div>
                         <div class="row m-0">
@@ -97,8 +84,7 @@ const PackageDetails = () => {
                                         <span class="fa  fa-star-o"></span>
                                         <span>(3 Ratings)</span>
                                     </div>
-                                    <a class="map-viw" href="/"><i class="fa fa-map-marker"></i> View on Map</a>
-                                    <a href="/contact-us" class="h-book">Booking Now</a>
+                                    <Link to='/contact-us' class="h-book">Booking Now</Link>
                                 </div>
                             </div>
                             <div class="col-lg-7">

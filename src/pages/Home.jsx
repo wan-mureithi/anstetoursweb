@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBullhorn, faPlane, faHome, faTicket, faClock, faTags,faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { packages } from '../data/packages';
@@ -153,7 +154,7 @@ const Home = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <button class="btn-packlist"><a href="/contact-us">Book now</a></button>
+                            <Link to="/contact-us" class="btn-packlist"> Book now</Link>
                         </div>
                     </div>
                 </div>

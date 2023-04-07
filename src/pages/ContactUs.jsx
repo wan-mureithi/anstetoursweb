@@ -4,6 +4,9 @@ import MenuBar from '../components/MenuBar';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 
+// const sgMail = require('@sendgrid/mail')
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
 const initialUserInfo = {
     name: '',
     email: '',
@@ -11,18 +14,27 @@ const initialUserInfo = {
     phoneNumber: '',
     comment: ''
 }
+const mailKey = process.env.REACT_APP_SENDGRID_KEY;
 const ContactUs = () => {
 const [userMessage, setUserMessage] = useState(initialUserInfo);
 
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log(userMessage)
+    // sgMail.send(userMessage)
+    // .then(() => {
+    //   console.log('Email sent')
+    // })
+    // .catch((error) => {
+    //   console.error(error)
+    // }) 
 }
 const handleFormInput = (e) => {
     const value = e.target.name;
-   setUserMessage({[value]:e.target.value})
+   setUserMessage({...userMessage,[value]:e.target.value})
     
 }
+console.log(mailKey)
   return (
     <>
     <header>
