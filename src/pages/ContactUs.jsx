@@ -4,8 +4,8 @@ import MenuBar from '../components/MenuBar';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 
-// const sgMail = require('@sendgrid/mail')
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+//add this to assign the sendEmail cloud function to a constant
+//const sendEmail = firebase.functions().httpsCallable('sendEmail');
 
 const initialUserInfo = {
     name: '',
@@ -14,7 +14,7 @@ const initialUserInfo = {
     phoneNumber: '',
     comment: ''
 }
-const mailKey = process.env.REACT_APP_SENDGRID_KEY;
+
 const ContactUs = () => {
 const [userMessage, setUserMessage] = useState(initialUserInfo);
 
@@ -34,7 +34,7 @@ const handleFormInput = (e) => {
    setUserMessage({...userMessage,[value]:e.target.value})
     
 }
-console.log(mailKey)
+
   return (
     <>
     <header>
@@ -113,7 +113,7 @@ console.log(mailKey)
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="text" value={userMessage.phoneNumber} onChange={handleFormInput}  class="form-control" id="pwd" placeholder="Phone"
-                                        name="phone"/>
+                                        name="phoneNumber"/>
                                 </div>
                             </div>
                             <div class="col-lg-12">
