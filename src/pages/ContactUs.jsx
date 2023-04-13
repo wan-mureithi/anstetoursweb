@@ -3,9 +3,7 @@ import TopBar from '../components/TopBar';
 import MenuBar from '../components/MenuBar';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
-
-//add this to assign the sendEmail cloud function to a constant
-//const sendEmail = firebase.functions().httpsCallable('sendEmail');
+import axios from 'axios';
 
 const initialUserInfo = {
     name: '',
@@ -18,16 +16,17 @@ const initialUserInfo = {
 const ContactUs = () => {
 const [userMessage, setUserMessage] = useState(initialUserInfo);
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(userMessage)
-    // sgMail.send(userMessage)
-    // .then(() => {
-    //   console.log('Email sent')
-    // })
-    // .catch((error) => {
-    //   console.error(error)
-    // }) 
+    const body = {
+        email: userMessage.email,
+        subject: userMessage.subject,
+        message: `<h3> Inquiry from ${userMessage.name} </h3> 
+        <p>${userMessage.comment} </p>`
+    }
+   const response = await axios.post("http://localhost:5000/api/send",body);
+   console.log(response.data)
 }
 const handleFormInput = (e) => {
     const value = e.target.name;
