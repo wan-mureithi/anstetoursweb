@@ -9,11 +9,17 @@ import ContactUs from './pages/ContactUs';
 import ErrorPage from './pages/ErrorPage';
 import PackageList from './pages/PackageList';
 import PackageDetails from './pages/PackageDetails';
+import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/test",
+    element: <App />,
     errorElement: <ErrorPage />,
   },
   {
@@ -30,6 +36,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/domestic-tours-2",
+    element: <PackageDetails />,
+  },
+  {
+    path: "/domestic-tours/:id",
     element: <PackageDetails />,
   },
   {

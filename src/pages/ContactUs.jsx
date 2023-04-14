@@ -4,6 +4,7 @@ import MenuBar from '../components/MenuBar';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import Alert from 'react-bootstrap/Alert';
 
 const initialUserInfo = {
     name: '',
@@ -15,6 +16,7 @@ const initialUserInfo = {
 
 const ContactUs = () => {
 const [userMessage, setUserMessage] = useState(initialUserInfo);
+const [openPopup, setOpenPopup] = useState(false)
 
 const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,6 +46,12 @@ const handleFormInput = (e) => {
         <MenuBar/>
         </div> 
     </header>
+    <Alert variant="danger" show={openPopup} onClose={() => setOpenPopup(false)} dismissible>
+        <Alert.Heading>Sent successfully!</Alert.Heading>
+        <p>
+          Thank you for sending us a message, we will get back to you shortly
+        </p>
+      </Alert>
     {/* banner */}
     <section class="same-section-spacing bg-banner">
         <div class="container">

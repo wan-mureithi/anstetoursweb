@@ -45,10 +45,10 @@ const PackageList = () => {
                     <div key={index} class="col-lg-12 col-md-6 col-sm-12">
                     <div class="single_package">
                         <div class="media">
-                            <img src="img/packages/tour1.JPG" alt=""/>
+                            <img style={{ maxHeight:'450px' }} src={item.Img} alt=""/>
                             <div class="media-body">
                                 <span class="direction"><i class="fas fa-map-marker-alt"><FontAwesomeIcon icon={faMapMarkerAlt} /></i>&nbsp;{item.Location}</span>
-                                <h3><Link to="/domestic-tours-2">{item.Title}</Link></h3>
+                                <h3><Link to={`/domestic-tours/${item.Id}`}>{item.Title}</Link></h3>
                                 <p>{item['Short description']}</p>
                                 <div class="duration">
                                     <ul>

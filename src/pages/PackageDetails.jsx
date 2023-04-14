@@ -7,9 +7,11 @@ import pack2 from "../images/hot-2.jpg"
 import place from "../images/place.jpg"
 import travel from "../images/travel.jpg"
 import Footer from '../components/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const PackageDetails = () => {
+    const {id} = useParams();
+    console.log(id)
   return (
     <>
     <header>
