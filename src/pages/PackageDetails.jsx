@@ -4,14 +4,15 @@ import TopBar from '../components/TopBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
 import pack2 from "../images/hot-2.jpg"
-import place from "../images/place.jpg"
 import travel from "../images/travel.jpg"
 import Footer from '../components/Footer'
 import { Link, useParams } from 'react-router-dom'
+import packages  from '../data/packages2.json'
 
 const PackageDetails = () => {
     const {id} = useParams();
-    console.log(id)
+    const packageItem = packages.find((item)=>item.Id === id)
+    console.log(packageItem)
   return (
     <>
     <header>
@@ -46,28 +47,22 @@ const PackageDetails = () => {
                 <div class="col-lg-12 col-md-12 col-sm-12 masonry">
                     <div class="package-detail">
                         <div class="package-list-wrap ">
-                            <img src={place} class="img-fluid" alt="det-img"/>
+                            <img src={`/${packageItem.Img}`} class="img-fluid" alt="det-img"/>
                             <div class="package-list-content">
-                                <p class="package-list-duration">1 day From <span
-                                        class="rate">$150</span>
+                                <p class="package-list-duration">{packageItem.Duration} From <span
+                                        class="rate">{packageItem['Cost approximation']}</span>
                                 </p>
                                 <h3 class="package-list-title">
-                                    <a href="/">Nairobi City Excursion</a>
+                                    <a href="/">{packageItem.Title}</a>
                                 </h3>
-                                <a class="package-list-button" href="/">Book Now</a>
+                                <Link class="package-list-button" to="/contact-us">Book Now</Link>
                             </div>
-                            <span class="off-box">OFF 40%</span>
+                            {/* <span class="off-box">OFF 40%</span> */}
                         </div>
                         <div class="col-lg-12">
                             <div class="package-info">
-                            <p>Experience three top Nairobi destinations in this day tour. 
-                                    Nairobi National Park tour, Elephant orphanage tour, Giraffe center tour and Karen Blixen Museum tour. This full-day tour is a perfrect way to begin or end your East Africa safari. Search out the wild life at Nairobi National Park, on the outskirts of Nairobi. Enjoy lunch at a local restaurant then visit the Karen Blixen Museum. Stop by at the giraffe center for a close-up look at the endangered Rothschild giraffe. </p>
-                                <p>You'll be picked up from your hotel after breakfast or the airport and proceed immediately to Nairobi National park for close to four hours of intensive game drives.
-At 11:30 am, we head to the David Sheldrick Wildlife Trust, known as the Elephant Orphanage for your chance to have an up-close and personal interaction with these adorable orphaned elephants.
-Your next stop will be the famous Giraffe Center, where you'll have the rare opportunity to come face to face with these beautiful creatures. Lucky visitors might even get a kiss from these unique creatures.
-A brief stop for lunch in any of the nearby restaurants.
-You'll wrap up your day with a visit to the famous Karen Blixen Museum. The museum house is in a serene environment that seems to belong to the past, surrounded by a tranquil garden and indigenous forest, with a splendid view of the Ngong Hills.
-At the end of the show, you are dropped back to your hotel or airport where our services come to an end.</p>
+                            <p>{packageItem['Short description']} </p>
+                                <p>{packageItem['Long description']}</p>
                                 
                             </div>
                         </div>
@@ -75,9 +70,8 @@ At the end of the show, you are dropped back to your hotel or airport where our 
                             <div class="col-lg-5">
                                 <div class="hotel-diss">
                                     <h4>HOTELS TO STAY</h4>
-                                    <h3>Loss Angeles California hotel</h3>
-                                    <p>Travel quia tempore, ex delectus rerum option's sapiente, magnam ptate reiciendis
-                                        eligendi cupiditate optimal.</p>
+                                    {/* <h3>Loss Angeles California hotel</h3> */}
+                                    <p>{packageItem.Hotels}</p>
                                     <div class="rating">
                                         <span class="fa fa-star"><FontAwesomeIcon icon={faStar}/></span>
                                         <span class="fa fa-star"><FontAwesomeIcon icon={faStar}/></span>
