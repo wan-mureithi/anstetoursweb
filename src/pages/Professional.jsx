@@ -262,7 +262,7 @@ const Professional = () => {
                   </div>
                   <div style={{padding:'25px 20px 60px'}} class="package-content">
                     <h3>
-                      <a href="/">{item.Title}</a>
+                      <Link to={`/domestic-tours/${item.Id}`}>{item.Title}</Link>
                     </h3>
                     <p>
                     <FontAwesomeIcon icon={faClock}/>&nbsp; {item.Duration}  
