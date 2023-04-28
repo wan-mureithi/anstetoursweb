@@ -12,7 +12,6 @@ import packages  from '../data/packages2.json'
 const PackageDetails = () => {
     const {id} = useParams();
     const packageItem = packages.find((item)=>item.Id === id)
-    console.log(packageItem)
   return (
     <>
     <header>
