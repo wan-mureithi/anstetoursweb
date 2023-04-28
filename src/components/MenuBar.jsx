@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { Link, useLocation } from "react-router-dom";
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const MenuBar = () => {
     const location = useLocation();
@@ -23,8 +21,7 @@ const MenuBar = () => {
                             </li>
            
                             <li class={location.pathname === '/international-tours' ? 'nav-item active' : 'nav-item'}>
-                                <Link to="/international-tours" className='nav-link' >International tours &nbsp;
-                                <i class="fas fa-angle-down"><FontAwesomeIcon icon={faAngleDown}/> </i>
+                                <Link to="/international-tours" className='nav-link' >International tours
                                 </Link>
                                 <ul class="dropdown">
                                     <li class="nav-item">
@@ -42,8 +39,7 @@ const MenuBar = () => {
                                 </ul>
                             </li>
                             <li class={location.pathname === '/domestic-tours' ? 'nav-item active' : 'nav-item'}>
-                                <Link to="/domestic-tours" className='nav-link' >Domestic tours &nbsp;
-                                 <i class="fas fa-angle-down"><FontAwesomeIcon icon={faAngleDown}/> </i>
+                                <Link to="/domestic-tours" className='nav-link' >Domestic tours 
                                 </Link>
                                 <ul class="dropdown">
                                     <li class="nav-item">
@@ -63,6 +59,9 @@ const MenuBar = () => {
 
                             <li class={location.pathname === '/contact-us' ? 'nav-item active' : 'nav-item'}>
                             <Link to="/contact-us" className='nav-link' >Contact Us</Link>
+                            </li>
+                            <li class={location.pathname === '/professional' ? 'nav-item active' : 'nav-item'}>
+                            <Link to="/professional" className='nav-link' >MICE</Link>
                             </li>
                         </ul>
                         

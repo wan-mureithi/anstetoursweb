@@ -25,6 +25,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/professional",
+    element: <Professional />,
+  },
+  {
+    path: "/guide-details",
+    element: <GuideDetails />,
+  },
+  {
     path: "/contact-us",
     element: <ContactUs />,
   },
@@ -47,14 +55,6 @@ const router = createBrowserRouter([
   {
     path: "/international-tours/:id",
     element: <PackageDetails />,
-  },
-  {
-    path: "/professional",
-    element: <Professional />,
-  },
-  {
-    path: "/guide-details",
-    element: <GuideDetails />,
   },
   
 ]);
