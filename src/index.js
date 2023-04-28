@@ -11,6 +11,7 @@ import PackageList from './pages/PackageList';
 import PackageDetails from './pages/PackageDetails';
 import App from './App';
 import Professional from './pages/Professional';
+import GuideDetails from './pages/GuideDetails';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/professional",
     element: <Professional />,
+  },
+  {
+    path: "/guide-details",
+    element: <GuideDetails />,
   },
   
 ]);
