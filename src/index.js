@@ -10,6 +10,7 @@ import ErrorPage from './pages/ErrorPage';
 import PackageList from './pages/PackageList';
 import PackageDetails from './pages/PackageDetails';
 import App from './App';
+import Professional from './pages/Professional';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/international-tours/:id",
     element: <PackageDetails />,
+  },
+  {
+    path: "/professional",
+    element: <Professional />,
   },
   
 ]);
